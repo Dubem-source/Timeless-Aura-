@@ -1,0 +1,403 @@
+export type Category = "Hoodies" | "Sweatshirts" | "Suits" | "Polos";
+
+export type Product = {
+  id: string;
+  slug: string;
+  image: string;
+  name: string;
+  category: Category;
+  price: number;
+  compareAt?: number;
+  sizes: string[];
+  colors: { name: string; hex: string }[];
+  description: string;
+  details: string[];
+  gradient: string;
+  featured?: boolean;
+  isNew?: boolean;
+};
+
+export const products: Product[] = [
+  {
+    id: "p1",
+    slug: "global-vision-hoodie",
+    image: "/images/products/global-vision-hoodie.jpg",
+    name: "Global Vision Hoodie",
+    category: "Hoodies",
+    price: 32000,
+    compareAt: 38000,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    colors: [
+      { name: "Black", hex: "#0A0A0B" },
+      { name: "Gold", hex: "#C9962E" },
+    ],
+    description:
+      "Our signature heavyweight hoodie, embroidered with the Global Vision graphic across the chest. Built for layering through Owerri's cool evenings.",
+    details: [
+      "420gsm brushed-fleece cotton",
+      "Embroidered chest graphic",
+      "Ribbed cuffs and hem",
+      "Customisable text on request",
+    ],
+    gradient: "from-charcoal2 via-charcoal to-ink",
+    featured: true,
+    isNew: true,
+  },
+  {
+    id: "p2",
+    slug: "crafted-in-mind-hoodie",
+    image: "/images/products/crafted-in-mind-hoodie.jpg",
+    name: "Crafted In Mind Hoodie",
+    category: "Hoodies",
+    price: 34000,
+    sizes: ["S", "M", "L", "XL"],
+    colors: [
+      { name: "Black", hex: "#0A0A0B" },
+      { name: "Charcoal", hex: "#212124" },
+    ],
+    description:
+      "A relaxed-fit hoodie with a bold typographic print, made for everyday wear that still reads premium.",
+    details: [
+      "380gsm cotton-poly blend",
+      "Front kangaroo pocket",
+      "Puff-print graphic",
+      "Pre-shrunk fabric",
+    ],
+    gradient: "from-ink via-charcoal to-charcoal2",
+    featured: true,
+  },
+  {
+    id: "p3",
+    slug: "after-time-hoodie",
+    image: "/images/products/after-time-hoodie.jpg",
+    name: "After Time Hoodie",
+    category: "Hoodies",
+    price: 33000,
+    sizes: ["M", "L", "XL", "XXL"],
+    colors: [{ name: "Black", hex: "#0A0A0B" }],
+    description:
+      "Oversized silhouette hoodie with a minimal wordmark — a wardrobe staple styled the Timeless Aura way.",
+    details: [
+      "Oversized boxy fit",
+      "Dropped shoulder seams",
+      "Soft fleece interior",
+      "Reinforced drawstrings",
+    ],
+    gradient: "from-charcoal via-ink to-charcoal2",
+  },
+  {
+    id: "p4",
+    slug: "sal-in-sweatshirt",
+    image: "/images/products/sal-in-sweatshirt.jpg",
+    name: "SAL-IN Crew Sweatshirt",
+    category: "Sweatshirts",
+    price: 27000,
+    sizes: ["S", "M", "L", "XL"],
+    colors: [
+      { name: "Black", hex: "#0A0A0B" },
+      { name: "Ivory", hex: "#F6F2E9" },
+    ],
+    description:
+      "A clean crewneck sweatshirt with subtle chest branding, designed to move easily from campus to evening wear.",
+    details: [
+      "340gsm loopback cotton",
+      "Woven neck label",
+      "Straight hem, ribbed collar",
+      "Available in curated colourways",
+    ],
+    gradient: "from-charcoal2 via-charcoal to-ink",
+    featured: true,
+  },
+  {
+    id: "p5",
+    slug: "17-day-crew-sweatshirt",
+    image: "/images/products/17-day-crew-sweatshirt.jpg",
+    name: "17 Day Crew Sweatshirt",
+    category: "Sweatshirts",
+    price: 26500,
+    sizes: ["S", "M", "L"],
+    colors: [{ name: "Black", hex: "#0A0A0B" }],
+    description:
+      "Numbered capsule release with a graphic sleeve print — part of our limited seasonal drop.",
+    details: [
+      "Limited seasonal capsule",
+      "Sleeve graphic print",
+      "Relaxed regular fit",
+      "Garment-washed for softness",
+    ],
+    gradient: "from-ink via-charcoal to-charcoal2",
+    isNew: true,
+  },
+  {
+    id: "p6",
+    slug: "aura-tailored-suit-male",
+    image: "/images/products/aura-tailored-suit-male.jpg",
+    name: "Aura Tailored Suit — Men",
+    category: "Suits",
+    price: 145000,
+    sizes: ["40", "42", "44", "46", "48"],
+    colors: [
+      { name: "Black", hex: "#0A0A0B" },
+      { name: "Charcoal", hex: "#212124" },
+    ],
+    description:
+      "A two-piece tailored suit cut for the Nigerian gentleman — sharp shoulders, tapered leg, finished by hand.",
+    details: [
+      "Two-piece: blazer + trouser",
+      "Half-canvas construction",
+      "Made-to-measure available",
+      "Includes garment bag",
+    ],
+    gradient: "from-charcoal via-ink to-charcoal2",
+    featured: true,
+  },
+  {
+    id: "p7",
+    slug: "aura-tailored-suit-female",
+    image: "/images/products/aura-tailored-suit-female.jpg",
+    name: "Aura Tailored Suit — Women",
+    category: "Suits",
+    price: 150000,
+    sizes: ["8", "10", "12", "14", "16"],
+    colors: [
+      { name: "Black", hex: "#0A0A0B" },
+      { name: "Gold", hex: "#C9962E" },
+    ],
+    description:
+      "A power-cut skirt or trouser suit with a fitted blazer, designed for boardrooms and owambe alike.",
+    details: [
+      "Fitted blazer, tapered trouser or pencil skirt",
+      "Structured shoulder line",
+      "Made-to-measure available",
+      "Includes garment bag",
+    ],
+    gradient: "from-charcoal2 via-ink to-charcoal",
+  },
+  {
+    id: "p8",
+    slug: "crafted-in-mind-polo",
+    image: "/images/products/crafted-in-mind-polo.jpg",
+    name: "Crafted In Mind Polo",
+    category: "Polos",
+    price: 22000,
+    sizes: ["S", "M", "L", "XL"],
+    colors: [
+      { name: "Black", hex: "#0A0A0B" },
+      { name: "Ivory", hex: "#F6F2E9" },
+    ],
+    description:
+      "Piqué cotton polo with embroidered crest — smart enough for the office, easy enough for the weekend.",
+    details: [
+      "220gsm piqué cotton",
+      "Embroidered chest crest",
+      "Ribbed collar and cuffs",
+      "Side vents for movement",
+    ],
+    gradient: "from-ink via-charcoal to-charcoal2",
+    featured: true,
+  },
+  {
+    id: "p9",
+    slug: "global-vision-polo",
+    image: "/images/products/global-vision-polo.jpg",
+    name: "Global Vision Polo",
+    category: "Polos",
+    price: 23000,
+    sizes: ["M", "L", "XL", "XXL"],
+    colors: [{ name: "Charcoal", hex: "#212124" }],
+    description:
+      "A tonal, minimal polo built on a heavier interlock fabric for structure that holds all day.",
+    details: [
+      "Interlock cotton fabric",
+      "Tonal embroidered logo",
+      "Two-button placket",
+      "Colour-fast dye",
+    ],
+    gradient: "from-charcoal via-charcoal2 to-ink",
+  },
+  {
+    id: "p10",
+    slug: "signature-heavy-hoodie",
+    image: "/images/products/signature-heavy-hoodie.jpg",
+    name: "Signature Heavyweight Hoodie",
+    category: "Hoodies",
+    price: 35000,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    colors: [{ name: "Black", hex: "#0A0A0B" }, { name: "Ivory", hex: "#F6F2E9" }],
+    description: "An ultra-thick drop shoulder hoodie featuring a clean profile and heavy ribbed details. Engineered for maximum comfort.",
+    details: ["450gsm ultra-heavy cotton", "Oversized drop-shoulder fit", "Double-layered spacious hood", "Hidden side seam pockets"],
+    gradient: "from-charcoal via-ink to-charcoal2",
+    isNew: true,
+  },
+  {
+    id: "p11",
+    slug: "minimalist-oversized-hoodie",
+    image: "/images/products/minimalist-oversized-hoodie.jpg",
+    name: "Minimalist Oversized Hoodie",
+    category: "Hoodies",
+    price: 33000,
+    sizes: ["M", "L", "XL"],
+    colors: [{ name: "Charcoal", hex: "#212124" }],
+    description: "Clean aesthetic with zero excess. A loose drape design crafted from soft brushed cotton with tonal minimal chest embroidery.",
+    details: ["400gsm organic cotton-fleece", "Relaxed boxy fit", "Tonal chest embroidery", "Reinforced flatlock stitching"],
+    gradient: "from-charcoal2 via-charcoal to-ink",
+  },
+  {
+    id: "p12",
+    slug: "streetwear-zip-hoodie",
+    image: "/images/products/streetwear-zip-hoodie.jpg",
+    name: "Streetwear Zip Hoodie",
+    category: "Hoodies",
+    price: 36500,
+    sizes: ["S", "M", "L", "XL"],
+    colors: [{ name: "Black", hex: "#0A0A0B" }],
+    description: "Full-zip hoodie detailed with custom dual-direction matte black metallic zippers. Perfect for layering and streetwear silhouettes.",
+    details: ["380gsm premium loopback cotton", "Two-way heavy duty front zipper", "Rib-knit side panels", "Embroidered cuff emblem"],
+    gradient: "from-ink via-charcoal to-charcoal2",
+  },
+  {
+    id: "p13",
+    slug: "essential-crew-sweatshirt",
+    image: "/images/products/essential-crew-sweatshirt.jpg",
+    name: "Essential Crew Sweatshirt",
+    category: "Sweatshirts",
+    price: 26000,
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    colors: [{ name: "Ivory", hex: "#F6F2E9" }, { name: "Charcoal", hex: "#212124" }],
+    description: "A classic crewneck sweatshirt designed to be your everyday standard. Perfectly balanced fit, soft interior, built to last.",
+    details: ["360gsm premium cotton fleece", "Classic regular fit crewneck", "Ribbed collar, cuffs and waistband", "Garment dyed for soft feel"],
+    gradient: "from-charcoal2 via-charcoal to-ink",
+  },
+  {
+    id: "p14",
+    slug: "washed-cotton-sweatshirt",
+    image: "/images/products/washed-cotton-sweatshirt.jpg",
+    name: "Washed Cotton Sweatshirt",
+    category: "Sweatshirts",
+    price: 28000,
+    sizes: ["M", "L", "XL"],
+    colors: [{ name: "Charcoal", hex: "#212124" }],
+    description: "Individually acid-washed for a vintage, lived-in patina. Each piece is unique with subtle color variations.",
+    details: ["380gsm loopback cotton", "Vintage wash treatment", "Flatlock comfort stitching", "Shrink-resistant finish"],
+    gradient: "from-ink via-charcoal to-charcoal2",
+  },
+  {
+    id: "p15",
+    slug: "vintage-fleece-crewneck",
+    image: "/images/products/vintage-fleece-crewneck.jpg",
+    name: "Vintage Fleece Crewneck",
+    category: "Sweatshirts",
+    price: 29000,
+    sizes: ["S", "M", "L", "XL"],
+    colors: [{ name: "Black", hex: "#0A0A0B" }, { name: "Gold", hex: "#C9962E" }],
+    description: "Retro-inspired crewneck sweatshirt with classic ribbed V-insert at the collar and vintage chain-stitch embroidered script.",
+    details: ["400gsm heavyweight fleece", "Ribbed collar V-insert decoration", "Vintage chain-stitch script", "Pre-shrunk organic cotton"],
+    gradient: "from-charcoal via-ink to-charcoal2",
+    isNew: true,
+  },
+  {
+    id: "p16",
+    slug: "athletics-club-sweatshirt",
+    image: "/images/products/athletics-club-sweatshirt.jpg",
+    name: "Athletics Club Sweatshirt",
+    category: "Sweatshirts",
+    price: 27500,
+    sizes: ["M", "L", "XL", "XXL"],
+    colors: [{ name: "Black", hex: "#0A0A0B" }],
+    description: "Collegiate style lettering printed in heavy puff-ink across the chest. Clean, athletic-inspired silhouette.",
+    details: ["350gsm premium cotton blend", "Puff-ink front print", "Ribbed side gussets", "Double needle stitched seams"],
+    gradient: "from-charcoal2 via-charcoal to-ink",
+  },
+  {
+    id: "p17",
+    slug: "distressed-oversized-sweatshirt",
+    image: "/images/products/distressed-oversized-sweatshirt.jpg",
+    name: "Distressed Oversized Sweatshirt",
+    category: "Sweatshirts",
+    price: 30000,
+    sizes: ["S", "M", "L", "XL"],
+    colors: [{ name: "Charcoal", hex: "#212124" }],
+    description: "Features custom hand-finished edge distressing at collar, cuffs, and hem. Relaxed, worn-in luxury aesthetic.",
+    details: ["380gsm dry-hand French terry", "Hand-finished edge distressing", "Oversized slouchy fit", "Soft enzyme wash"],
+    gradient: "from-ink via-charcoal to-charcoal2",
+  },
+  {
+    id: "p18",
+    slug: "classic-double-breasted-suit",
+    image: "/images/products/classic-double-breasted-suit.jpg",
+    name: "Classic Double-Breasted Suit",
+    category: "Suits",
+    price: 165000,
+    sizes: ["44", "46", "48", "50", "52"],
+    colors: [{ name: "Black", hex: "#0A0A0B" }],
+    description: "A commanding double-breasted suit featuring wide peak lapels, structured shoulders, and a tailored double-vent jacket.",
+    details: ["Italian wool-cashmere blend", "Structured double-breasted fit", "Sartorial pick-stitch edging", "Fully lined in cupro"],
+    gradient: "from-charcoal via-ink to-charcoal2",
+    isNew: true,
+  },
+  {
+    id: "p19",
+    slug: "modern-slim-fit-suit",
+    image: "/images/products/modern-slim-fit-suit.jpg",
+    name: "Modern Slim-Fit Suit",
+    category: "Suits",
+    price: 140000,
+    sizes: ["40", "42", "44", "46", "48", "50"],
+    colors: [{ name: "Charcoal", hex: "#212124" }],
+    description: "A clean, modern two-button suit jacket paired with matching slim-fit trousers. Perfect for contemporary elegance.",
+    details: ["Super 110s lightweight virgin wool", "Tailored slim-fit profile", "Notch lapels, two-button front", "Unfinished trouser hems for custom tailoring"],
+    gradient: "from-charcoal2 via-charcoal to-ink",
+  },
+  {
+    id: "p20",
+    slug: "luxury-wool-tuxedo",
+    image: "/images/products/luxury-wool-tuxedo.jpg",
+    name: "Luxury Wool Tuxedo",
+    category: "Suits",
+    price: 180000,
+    sizes: ["44", "46", "48", "50", "52"],
+    colors: [{ name: "Black", hex: "#0A0A0B" }],
+    description: "Our signature evening wear tuxedo jacket featuring silk satin shawl lapels and matching side-stripe tailored trousers.",
+    details: ["100% fine worsted wool", "Satin-faced shawl lapels", "Satin covered single buttons", "Satin trouser side-stripes"],
+    gradient: "from-ink via-charcoal to-charcoal2",
+  },
+  {
+    id: "p21",
+    slug: "casual-linen-blazer-suit",
+    image: "/images/products/casual-linen-blazer-suit.jpg",
+    name: "Casual Linen Blazer Suit",
+    category: "Suits",
+    price: 120000,
+    sizes: ["40", "42", "44", "46", "48"],
+    colors: [{ name: "Ivory", hex: "#F6F2E9" }],
+    description: "A breathable, unlined linen suit blazer and drawstring trouser set. Perfect for beach weddings and summer events.",
+    details: ["100% premium Irish linen", "Unlined, lightweight comfort structure", "Drawstring waist tailored pants", "Patch pockets on blazer"],
+    gradient: "from-charcoal2 via-ink to-charcoal",
+  },
+  {
+    id: "p22",
+    slug: "merino-wool-knit-polo",
+    image: "/images/products/merino-wool-knit-polo.jpg",
+    name: "Merino Wool Knit Polo",
+    category: "Polos",
+    price: 25500,
+    sizes: ["S", "M", "L", "XL"],
+    colors: [{ name: "Black", hex: "#0A0A0B" }, { name: "Ivory", hex: "#F6F2E9" }],
+    description: "Crafted from fine-gauge extrafine merino wool. Features a classic polo collar, three-button ribbed placket, and real shell buttons.",
+    details: ["100% extrafine merino wool", "Fine 12-gauge knit construction", "Genuine mother-of-pearl buttons", "Ribbed knit cuffs and hem"],
+    gradient: "from-charcoal via-charcoal2 to-ink",
+    isNew: true,
+  },
+];
+
+export const categories: Category[] = ["Hoodies", "Sweatshirts", "Suits", "Polos"];
+
+export function getProductBySlug(slug: string) {
+  return products.find((p) => p.slug === slug);
+}
+
+export function getRelatedProducts(product: Product, count = 4) {
+  return products
+    .filter((p) => p.category === product.category && p.id !== product.id)
+    .slice(0, count);
+}

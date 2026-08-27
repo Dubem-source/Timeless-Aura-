@@ -38,6 +38,32 @@ export const metadata: Metadata = {
     "FUTO clothing brand",
     "premium streetwear Nigeria",
   ],
+  icons: {
+    icon: "/images/logo/logo.png",
+    apple: "/images/logo/logo.png",
+  },
+  openGraph: {
+    title: "Timeless Aura — Timeless Wears, Endless Aura",
+    description:
+      "Timeless Aura is a premium Nigerian clothing label offering customised hoodies, sweatshirts, suits and polos. Elegance in every era.",
+    siteName: "Timeless Aura",
+    images: [
+      {
+        url: "/images/logo/logo.png",
+        width: 512,
+        height: 512,
+        alt: "Timeless Aura logo",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Timeless Aura — Timeless Wears, Endless Aura",
+    description:
+      "Timeless Aura is a premium Nigerian clothing label offering customised hoodies, sweatshirts, suits and polos. Elegance in every era.",
+    images: ["/images/logo/logo.png"],
+  },
 };
 
 export default function RootLayout({
